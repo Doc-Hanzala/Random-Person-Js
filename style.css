@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --transition: all 0.5s;
+  --spacing: 5px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightcyan;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+  text-align: center;
+  width: 90vw;
+  max-width: 680px;
+}
+
+.title {
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  color: gray;
+}
+
+.underline {
+  height: 5px;
+  width: 150px;
+  margin: 0.5rem auto;
+  background: orangered;
+  border-radius: 10px;
+}
+
+.review {
+  background: white;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.review:hover {
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.8);
+}
+
+.img-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img-container::before {
+  content: "";
+  position: absolute;
+  background: orangered;
+  height: 100%;
+  width: 100%;
+  top: -0.25rem;
+  left: 0.5rem;
+  border-radius: 50%;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0.1rem;
+  transform: translateY(20px);
+  background: orangered;
+  padding: 0.65rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.name {
+  text-transform: capitalize;
+  margin: 0.45rem 0;
+  font-weight: lighter;
+  letter-spacing: var(--spacing);
+}
+
+.job {
+  text-transform: capitalize;
+  color: orangered;
+}
+
+.info {
+  line-height: 1.5;
+  color: gray;
+  margin: 1rem 0;
+}
+
+.nextPerson,
+.prevPerson {
+  background: orangered;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nextPerson:hover {
+  color: orangered;
+  background: transparent;
+}
+.prevPerson:hover {
+  color: orangered;
+  background: transparent;
+}
+
+.surprise {
+  margin: 1rem 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.5rem 0.8rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  background: orangered;
+  color: white;
+  border-radius: 10px;
+  border: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.surprise:hover{
+    border:2px solid black;
+    color: black;
+    background: transparent;
+}
